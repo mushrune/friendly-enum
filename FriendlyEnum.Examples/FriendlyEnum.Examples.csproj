@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+
+    <ItemGroup>
+      <ProjectReference Include="..\FriendlyEnum\FriendlyEnum.csproj" />
+    </ItemGroup>
+
 </Project>
