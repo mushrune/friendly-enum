@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendlyEnum", "FriendlyEnum\FriendlyEnum.csproj", "{4D2A3706-E8AD-4389-8FC6-F04667964390}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendlyEnum.Examples", "FriendlyEnum.Examples\FriendlyEnum.Examples.csproj", "{8E05B692-2D03-49D2-953A-42C788B472C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{4D2A3706-E8AD-4389-8FC6-F04667964390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D2A3706-E8AD-4389-8FC6-F04667964390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D2A3706-E8AD-4389-8FC6-F04667964390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E05B692-2D03-49D2-953A-42C788B472C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E05B692-2D03-49D2-953A-42C788B472C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E05B692-2D03-49D2-953A-42C788B472C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E05B692-2D03-49D2-953A-42C788B472C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
