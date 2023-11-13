@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FQG8a8Nw4AH2Hrg8dJ3ZonOqn51cD371RUMOZSo9CSws2VOQ5gxm6yu+LokVSkxqsP/hm77Lg8zIp5Htw1Bj/g==",
+  "success": true,
+  "projectFilePath": "/Users/mushrune/Source/Repositories/friendly-enum/FriendlyEnum/FriendlyEnum.csproj",
+  "expectedPackageFiles": [
+    "/Users/mushrune/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
