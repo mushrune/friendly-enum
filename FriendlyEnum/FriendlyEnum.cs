@@ -2,23 +2,27 @@
 
 public abstract class FriendlyEnum
 {
-    protected FriendlyEnum(string value) { Value = value; }
-    public string Value { get; protected set; }
+    protected FriendlyEnum( string value ) { Value = value; }
+    public readonly string Value;
     
-    public override string ToString() { return Value; }
+    public override string ToString() => Value;
 
-    public static bool operator ==(FriendlyEnum x, FriendlyEnum y)
+    public static bool operator ==( FriendlyEnum? x, FriendlyEnum? y )
     {
-        if (ReferenceEquals(x, y)) return true;
-        if (x is null || y is null) return false;
+        if (ReferenceEquals(x, y))
+        {
+            return true;
+        }
+
+        if ( x is null || y is null )
+        {
+            return false;
+        }
         return x.Equals(y);
     }
-
-    public static bool operator !=(FriendlyEnum x, FriendlyEnum y)
-    {
-        return !( x == y );
-    }
-    public override bool Equals(object obj)
+    public static bool operator !=(FriendlyEnum x, FriendlyEnum y) => !( x == y );
+    
+    public override bool Equals( object? obj)
     {
         if (obj is FriendlyEnum other)
         {
@@ -26,8 +30,9 @@ public abstract class FriendlyEnum
         }
         return false;
     }
+
     public override int GetHashCode()
-    {
+    { 
         return Value.GetHashCode();
     }
 }
