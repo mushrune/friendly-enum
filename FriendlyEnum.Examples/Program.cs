@@ -7,28 +7,28 @@ class Program
 {
     static void Main(string[] args)
     {
-        
-        var today = new Day()
-        {
-            Weather = Weather.Cloudy,
-            Date = DateTime.Today
-        };
+        string todayJson = """
+           { 
+               "weather": "rainy", 
+               "date": "2023-11-12T00:00:00-08:00"
+           }
+        """;
+
+        var today = JsonConvert.DeserializeObject<Day>( todayJson );
+        if ( today is null ) { throw new Exception("Could not serialize JSON for today's date and weather."); }
 
         var yesterday = new Day()
         {
-            Weather = Weather.Sunny,
+            Weather = Weather.Rainy,
             Date = DateTime.Today.AddDays( -1 )
         };
-        
-        Day result = today;
-        
-        if ( today.Weather != yesterday.Weather )
-        {
-            result = yesterday;
-        }
 
-        var serializedDay = JsonConvert.SerializeObject( result, Formatting.Indented );
+        Console.WriteLine( today.Weather == yesterday.Weather
+            ? "The weather was the same today and yesterday."
+            : "The weather was different yesterday." );
+
+        var serializedResult = JsonConvert.SerializeObject( today, Formatting.Indented );
         
-        Console.Write( serializedDay );
+        Console.Write( serializedResult );
     }
 }
